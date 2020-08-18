@@ -44,7 +44,7 @@ def words_to_arpabet(
                 if w.replace("'", "").isalnum() and w in lexicon:
                     words[j] = lexicon[w]
                     did_anything = True
-                elif w.isalnum() and w not in lexicon:
+                elif w.replace("'", "").isalnum() and w not in lexicon:
                     e = str(
                         "Word "
                         + w
